@@ -4,8 +4,9 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "test": "cross-env NODE_ENV=test node app.js"
   },
   "keywords": [
     "NoSQL",
@@ -17,6 +18,7 @@
   "license": "ISC, MIT license",
   "description": "Este proyecto es un backend desarrollado utilizando NestJS, un framework de Node.js para construir aplicaciones de servidor escalables y mantenibles. El backend está configurado para interactuar con una base de datos, lo que permite almacenar y recuperar información de manera eficiente.",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.14.1"
