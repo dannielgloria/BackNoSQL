@@ -1,8 +1,9 @@
 import mongoose from "mogoose"
+import {mongoDomain,mongoUser,mongoPwd,mongoDb} from './constants.js'
 
 const connectDB = async() => {
     try {
-        await mongoose.connect("mongodb+srv://dannielgloria:sqk1AEo4KsYOyPmS@cluster-devf.kz3lcvn.mongodb.net/");
+        await mongoose.connect(`${mongoDomain}${mongoUser}:${mongoPwd}@${mongoDb}`);
         console.log('MongoDB Connected...');
     } catch (error) {
         console.error(error);
