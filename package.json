@@ -7,10 +7,10 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["NoSQL", "Express", "Backend", "Software"],
+  "author": "Daniel Gloria FLorencio",
+  "license": "ISC, MIT license",
+  "description": "Este proyecto es un backend desarrollado utilizando NestJS, un framework de Node.js para construir aplicaciones de servidor escalables y mantenibles. El backend está configurado para interactuar con una base de datos, lo que permite almacenar y recuperar información de manera eficiente.",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
