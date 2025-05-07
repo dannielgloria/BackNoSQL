@@ -1,4 +1,4 @@
-import mongoose from "mogoose"
+import mongoose from 'mongoose';
 import {mongoDomain,mongoUser,mongoPwd,mongoDb} from './constants.js'
 
 const connectDB = async() => {
