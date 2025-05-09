@@ -9,6 +9,7 @@ dotenv.config({ path: envPath});
 
 export const port = process.env.PORT_APP
 export const uri = process.env.URI_APP
+export const keyToken = process.env.JWT_SECRET
 
 export const mongoDomain = process.env.MONGO_DOMAIN
 export const mongoUser = process.env.MONGO_USER
