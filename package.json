@@ -19,9 +19,11 @@
   "description": "Este proyecto es un backend desarrollado utilizando NestJS, un framework de Node.js para construir aplicaciones de servidor escalables y mantenibles. El backend está configurado para interactuar con una base de datos, lo que permite almacenar y recuperar información de manera eficiente.",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "celebrate": "^15.0.3",
     "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.14.1"
   },
