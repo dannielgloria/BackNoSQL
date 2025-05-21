@@ -16,3 +16,5 @@ export const mongoUser = process.env.MONGO_USER
 export const mongoPwd = process.env.MONGO_PWD
 export const mongoDb = process.env.MONGO_DATABASE
 
+export const firebaseBucket = process.env.FIREBASE_STORAGE_BUCKET;
+export const googleCredentials = process.env.GOOGLE_CREDENTIALS;
