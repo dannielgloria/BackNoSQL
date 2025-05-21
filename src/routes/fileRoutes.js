@@ -1,10 +1,14 @@
 import express from "express";
 import upload from "../middleware/uploadMiddleware.js";
-import { uploadFileFirebase } from "../controllers/fileController.js";
+import uploadLocal from "../middleware/uploadLocalMiddleware.js"
+import { uploadFileFirebase, uploadFileLocal } from "../controllers/fileController.js";
 import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
 router.post('/cloud', protect, upload.single('file'), uploadFileFirebase)
+
+router.post('/local', protect, uploadLocal.single('file'), uploadFileLocal)
+
 
 export default router;

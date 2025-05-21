@@ -1,4 +1,5 @@
 import { bucket } from "../config/firebase.js";
+import path from 'path';
 
 export const uploadFileFirebase = async (req, res) => {
     if (!req.file) {
@@ -27,4 +28,19 @@ export const uploadFileFirebase = async (req, res) => {
     });
 
     stream.end(req.file.buffer);
+};
+
+export const uploadFileLocal = async (req, res) => {
+    console.log(req.body)
+
+    if (!req.file) {
+        return res.status(400).json({ message: 'No file uploaded'});
+    }
+
+    res.status(200).json({
+                message: 'File upload successfully',
+                filename: req.file.filename,
+                path: req.file.path,
+    });
+
 };
