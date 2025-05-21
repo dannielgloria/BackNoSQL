@@ -4,6 +4,7 @@ import { port, uri } from './src/config/constants.js';
 import healtCheckRoutes from './src/routes/healtCheckRoutes.js'
 import userRoutes from './src/routes/userRoutes.js'
 import authRoutes from './src/routes/authRoutes.js'
+import fileRoutes from './src/routes/fileRoutes.js'
 import { generalErrorHandler, celebrateErrorHandler } from './src/middleware/errorMiddleware.js';
 
 connectDB();
@@ -19,6 +20,9 @@ app.use(`${uri}/users`, userRoutes);
 
 //http://localhost:5001/api/v0/auth
 app.use(`${uri}/auth`, authRoutes);
+
+//http://localhost:5001/api/v0/upload
+app.use(`${uri}/upload`, fileRoutes);
 
 // Se agregan manejo de errores de celebrate
 app.use(celebrateErrorHandler);
