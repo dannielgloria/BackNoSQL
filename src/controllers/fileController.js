@@ -30,17 +30,15 @@ export const uploadFileFirebase = async (req, res) => {
     stream.end(req.file.buffer);
 };
 
-export const uploadFileLocal = async (req, res) => {
-    console.log(req.body)
-
+export const uploadLocalFile = async (req, res) => {
     if (!req.file) {
-        return res.status(400).json({ message: 'No file uploaded'});
+      return res.status(400).json({ message: 'No se ha subido ningún archivo.' });
     }
-
-    res.status(200).json({
-                message: 'File upload successfully',
-                filename: req.file.filename,
-                path: req.file.path,
+  
+    res.status(201).json({
+      message: 'Archivo subido con éxito',
+      filename: req.file.filename,
+      path: req.file.path,
     });
-
-};
+  };
+  
