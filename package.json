@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node app.js",
     "dev": "cross-env NODE_ENV=development nodemon app.js",
-    "test": "cross-env NODE_ENV=test node app.js"
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit"
   },
   "keywords": [
     "NoSQL",
@@ -17,6 +17,9 @@
   "author": "Daniel Gloria FLorencio",
   "license": "ISC, MIT license",
   "description": "Este proyecto es un backend desarrollado utilizando NestJS, un framework de Node.js para construir aplicaciones de servidor escalables y mantenibles. El backend está configurado para interactuar con una base de datos, lo que permite almacenar y recuperar información de manera eficiente.",
+  "jest":{
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "celebrate": "^15.0.3",
