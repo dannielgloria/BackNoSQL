@@ -7,7 +7,9 @@ import authRoutes from './src/routes/authRoutes.js'
 import fileRoutes from './src/routes/fileRoutes.js'
 import { generalErrorHandler, celebrateErrorHandler } from './src/middleware/errorMiddleware.js';
 
-connectDB();
+if (process.env.NODE_ENV !== 'test') {
+    connectDB();
+}
 
 const app = express();
 // nos permitira hacer uso de json en peticiones
@@ -30,3 +32,5 @@ app.use(generalErrorHandler);
 
 const PORT = port || 5000;
 app.listen(PORT, console.log(`Server running on http://localhost:${PORT}${uri}`));
+
+export default app;
