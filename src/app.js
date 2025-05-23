@@ -1,11 +1,11 @@
 import express from 'express';
-import connectDB from './src/config/db.js';
-import { port, uri } from './src/config/constants.js';
-import healtCheckRoutes from './src/routes/healtCheckRoutes.js'
-import userRoutes from './src/routes/userRoutes.js'
-import authRoutes from './src/routes/authRoutes.js'
-import fileRoutes from './src/routes/fileRoutes.js'
-import { generalErrorHandler, celebrateErrorHandler } from './src/middleware/errorMiddleware.js';
+import connectDB from './config/db.js';
+import { port, uri } from './config/constants.js';
+import healtCheckRoutes from './routes/healtCheckRoutes.js'
+import userRoutes from './routes/userRoutes.js'
+import authRoutes from './routes/authRoutes.js'
+import fileRoutes from './routes/fileRoutes.js'
+import { generalErrorHandler, celebrateErrorHandler } from './middleware/errorMiddleware.js';
 
 if (process.env.NODE_ENV !== 'test') {
     connectDB();

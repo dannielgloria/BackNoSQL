@@ -1,7 +1,7 @@
 import resquest from 'supertest';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import app from '../../app.js';
+import app from '../../src/app.js';
 import User from '../../src/models/Users.js';
 
 let mongoServer;

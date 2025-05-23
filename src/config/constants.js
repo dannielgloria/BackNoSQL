@@ -1,9 +1,11 @@
-import dotenv, { config } from 'dotenv';
+import dotenv from 'dotenv';
 import path from 'path';
-import { env } from 'process';
+import { fileURLToPath } from 'url';
 
-const envPath = path.resolve(process.cwd(),`.env.${process.env.NODE_ENV || 'development'}`)
-console.log("Environment:", process.env.NODE_ENV);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const envPath = path.resolve(__dirname, `../../.env.${process.env.NODE_ENV || 'development'}`);
 
 dotenv.config({ path: envPath});
 
